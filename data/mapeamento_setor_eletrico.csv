@@ -1,0 +1,19 @@
+Ticker,Empresa,Segmento,Regiao,Estados
+AXIA3,Axia (ex-Eletrobras),Integrada,Norte/Nordeste/Centro-Oeste/Sudeste/Sul,"AC,AL,AP,AM,BA,CE,DF,ES,GO,MA,MT,MS,MG,PA,PB,PR,PE,PI,RJ,RN,RS,RO,RR,SC,SP,SE,TO"
+ISAE4,ISA Energia,Transmissão,Nordeste/Centro-Oeste/Sudeste/Sul,"SP,MG,SC,PR,RS,RJ,ES,MT,MS,GO,BA,SE,AL,PE,PI,MA,TO"
+AURE3,Auren,Geração,Norte/Nordeste/Centro-Oeste/Sudeste/Sul,"SP,PI,PE,RS,RN,BA,MG,GO,MS,MT,PA,TO"
+EGIE3,Engie Brasil,Integrada,Norte/Nordeste/Centro-Oeste/Sudeste/Sul,"SC,RS,PR,SP,MG,RJ,ES,BA,SE,PI,MA,TO,GO,MT,MS"
+TAEE11,Taesa,Transmissão,Norte/Nordeste/Centro-Oeste/Sudeste/Sul,"MG,SP,PR,RS,SC,RJ,ES,BA,SE,AL,PE,PB,RN,CE,PI,MA,TO,GO,MT,MS,PA"
+EQTL3,Equatorial,Integrada,Norte/Nordeste/Centro-Oeste/Sul,"MA,PA,PI,AL,RS,GO,AP"
+CPFE3,CPFL Energia,Integrada,Sudeste/Sul,"SP,RS,MG,PR"
+CMIG4,Cemig,Integrada,Sudeste/Centro-Oeste,"MG,SP,RJ,ES,GO"
+CPLE6,Copel,Integrada,Sul/Sudeste,"PR,SP,SC,RS"
+NEOE3,Neoenergia,Integrada,Nordeste/Centro-Oeste/Sudeste,"BA,PE,RN,SP,MS,DF"
+ALUP11,Alupar,Transmissão,Norte/Nordeste/Centro-Oeste/Sudeste/Sul,"SP,MG,GO,MT,MS,PA,AM,RR,MA,PI,CE,RN,PB,PE,SE,BA,ES,RJ,PR,SC,RS"
+ENGI11,Energisa,Integrada,Norte/Nordeste/Centro-Oeste/Sudeste/Sul,"MG,RJ,SP,PR,SE,PB,MT,MS,TO,RO,AC"
+CEEB3,Coelba,Distribuição,Nordeste,BA
+EKTR4,Elektro,Distribuição,Sudeste/Centro-Oeste,"SP,MS"
+ENEV3,Eneva,Geração,Norte/Nordeste/Centro-Oeste,"MA,CE,AM,RR,SE,BA,MS"
+LIGT3,Light,Distribuição,Sudeste,RJ
+CLSC4,Celesc,Integrada,Sul,SC
+GEPA4,Rio Paranapanema,Geração,Sudeste/Sul,"SP,PR"
