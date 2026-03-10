@@ -1,4 +1,4 @@
-Ticker,Empresa,Segmento,Regiao,Estados
+Ticker,Empresa,Segmento,Regiao_Atuacao,Estados_Atuacao
 AXIA3,Axia (ex-Eletrobras),Integrada,Norte/Nordeste/Centro-Oeste/Sudeste/Sul,"AC,AL,AP,AM,BA,CE,DF,ES,GO,MA,MT,MS,MG,PA,PB,PR,PE,PI,RJ,RN,RS,RO,RR,SC,SP,SE,TO"
 ISAE4,ISA Energia,Transmissão,Nordeste/Centro-Oeste/Sudeste/Sul,"SP,MG,SC,PR,RS,RJ,ES,MT,MS,GO,BA,SE,AL,PE,PI,MA,TO"
 AURE3,Auren,Geração,Norte/Nordeste/Centro-Oeste/Sudeste/Sul,"SP,PI,PE,RS,RN,BA,MG,GO,MS,MT,PA,TO"
