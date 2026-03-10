@@ -63,3 +63,37 @@ with col_graf2:
 # --- TABELA DETALHADA ---
 st.subheader("Dados Consolidados e Estados de Atuação")
 st.dataframe(df_filtrado[['Ticker', 'Empresa', 'Segmento', 'Regiao_Atuacao', 'Estados_Atuacao', 'roe', 'dy', 'mrgliq']])
+
+# --- ANÁLISE DE PRESENÇA NACIONAL ---
+st.divider()
+st.subheader("📊 Presença Territorial por Estado")
+
+# 1. Tratamento: Explodir a string de estados (ex: SP, RJ -> SP e RJ)
+df_presenca = df_filtrado.assign(Estado=df_filtrado['Estados_Atuacao'].str.split(',')).explode('Estado')
+df_presenca['Estado'] = df_presenca['Estado'].str.strip()
+
+# 2. Agrupar para saber quantas empresas do seu filtro estão em cada estado
+ranking_estados = df_presenca.groupby('Estado').size().reset_index(name='Qtd_Empresas')
+ranking_estados = ranking_estados.sort_values('Qtd_Empresas', ascending=True) # Ordem para o gráfico horizontal
+
+# 3. Gráfico de Barras Horizontal (Muito mais legível que o mapa vazio)
+fig_presenca = px.bar(
+    ranking_estados, 
+    x='Qtd_Empresas', 
+    y='Estado', 
+    orientation='h',
+    title="Estados com Maior Concentração de Empresas do Portfólio",
+    color='Qtd_Empresas',
+    color_continuous_scale="Viridis",
+    labels={'Qtd_Empresas': 'Número de Empresas', 'Estado': 'UF'}
+)
+
+fig_presenca.update_layout(showlegend=False, height=600)
+
+st.plotly_chart(fig_presenca, use_container_width=True)
+
+# 4. Insights Automáticos para o seu Portfólio
+estado_lider = ranking_estados.iloc[-1]['Estado']
+qtd_lider = ranking_estados.iloc[-1]['Qtd_Empresas']
+
+st.info(f"💡 **Insight Econômico:** O estado de **{estado_lider}** possui a maior concentração do seu portfólio, com **{qtd_lider} empresas** atuantes. Isso indica uma exposição maior aos riscos regulatórios e tarifários desta região.")
