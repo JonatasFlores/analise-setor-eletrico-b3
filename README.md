@@ -1,24 +1,47 @@
 # Análise Estratégica do Setor Elétrico Brasileiro (2026) ⚡
 
-### ⚠️ Projeto em Desenvolvimento
+## 🚀 Sobre o Projeto
+Esta plataforma de inteligência de dados integra análise fundamentalista estática com dados de mercado em tempo real, focada exclusivamente no **setor elétrico brasileiro**. O sistema oferece uma visão 360º de holdings como Eletrobras, CPFL, Equatorial e outras, servindo como uma ferramenta de suporte à decisão estratégica e análise de performance.
 
-## Descrição do Projeto
-Este projeto consiste em uma plataforma de inteligência de dados voltada para o **setor elétrico brasileiro**. O objetivo é integrar dados financeiros reais da B3 com uma camada de inteligência setorial personalizada, permitindo análises comparativas entre os segmentos de **Geração, Transmissão e Distribuição**.
+O projeto nasceu de um interesse pessoal em aprofundar a análise de dados no setor de *utilities*, unindo tecnologia e fundamentos econômicos para gerar insights rápidos sobre eficiência e valuation.
 
-O diferencial deste portfólio é a curadoria manual de ativos (considerando fusões e mudanças de tickers recentes como AXIA3 e ISAE4) e o mapeamento geográfico de atuação das principais holdings do país.
+## ✨ Funcionalidades Implementadas
+- [x] **Dashboard Executivo**: KPIs setoriais consolidados (ROE, DY, P/L e P/VP)
+- [x] **Inteligência Territorial**: Mapeamento da capilaridade das empresas por estados e regiões
+- [x] **Ranking de Performance**: Top 5 dinâmico para identificação de oportunidades e riscos (Endividamento, Valuation)
+- [x] **Terminal Real-Time**: Cotações ao vivo via Yahoo Finance com gráficos históricos de 12 meses
+- [x] **Curadoria de Ativos**: Dados atualizados com novos tickers e movimentações recentes do setor (ex: AXIA3, ISAE4)
 
-## Funcionalidades em Implementação
-* [x] **Pipeline de Dados**: Coleta automatizada de indicadores fundamentais de todos os ativos da B3.
-* [x] **Data Lake**: Armazenamento de snapshots históricos em banco de dados SQLite para análise de séries temporais.
-* [x] **Curadoria Setorial**: Mapeamento detalhado de segmentos e estados de atuação das empresas elétricas.
-* [ ] **Dashboard Interativo**: Visualização de indicadores de eficiência (ROE, Margens) e endividamento.
-* [ ] **Mapeamento Geográfico**: Visualização da capilaridade das empresas por região e estado.
+## 🛠️ Tecnologias Utilizadas
+- **Python** (Pandas, Plotly, YFinance)
+- **Streamlit** (Interface e Visualização de Dados)
 
-## Tecnologias Utilizadas
-* **Linguagem**: Python (Pandas, Fundamentus, SQLite).
-* **Arquitetura**: Engenharia de dados em camadas (Raw e Refined).
-* **Contexto**: Análise Econômica e Financeira.
+## 💻 Como Executar o Projeto Localmente
 
----
-**Autor**: Jonatas Flores  
-*Estudante de Ciências Econômicas e Entusiasta de Tecnologia/Finanças.*
+### 1. Clone o repositório
+```bash
+git clone https://github.com/JonatasFlores/analise-setor-eletrico-b3.git
+cd analise-setor-eletrico-b3
+```
+
+### 2. Instale as dependências
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Execute o Dashboard
+```bash
+streamlit run app/main.py
+```
+
+## 🌐 Próximos Passos
+- [ ] Deploy Online: Disponibilização do dashboard via Streamlit Cloud
+- [ ] Análise de Payout: Implementação de indicadores de distribuição de lucro
+- [ ] Varredura de Dados: Atualização final e validação de base antes da divulgação oficial
+
+## 📈 Contexto e Objetivo
+Este projeto foi desenvolvido como aprimoramento complementar às competências de análise de mercado. Aplica conceitos de Stock Picking quantitativo e análise de balanços para demonstrar capacidade técnica em uma das áreas de atuação das Ciências Econômicas.
+
+## Autor
+**Jonatas Flores**  
+Estudante de Ciências Econômicas | Analista Trainee
