@@ -305,19 +305,15 @@ if historico is not None and not historico.empty:
 else:
     st.warning(f"Aguardando conexão ou dados indisponíveis para {ticker_selecionado}.")
 
-# 2. Bloco de Detalhes (Gráfico + Fundamentos)
+# 2. Bloco de Detalhes (Gráfico + Fundamentos + Payout)
 with st.expander(f"➕ Detalhes de {ticker_selecionado}"):
-    # Busca a linha correspondente no CSV
     dados_ticker = df_filtrado[df_filtrado['Ticker'] == ticker_selecionado].iloc[0]
     
-    # Adicionando o Gráfico de Evolução de Preços
+    # Gráfico de Evolução (Mantendo o que já fizemos)
     if historico is not None and not historico.empty:
         st.markdown(f"**Evolução do Preço (12 meses): {ticker_selecionado}**")
-        # Criando o gráfico de linha simples e elegante
         fig_evolucao = px.line(
-            historico, 
-            x=historico.index, 
-            y='Close',
+            historico, x=historico.index, y='Close',
             labels={'Close': 'Preço (R$)', 'Date': 'Data'},
             template="plotly_dark"
         )
@@ -326,12 +322,28 @@ with st.expander(f"➕ Detalhes de {ticker_selecionado}"):
     
     st.divider()
     
+    # Lógica de Cálculo do Payout
+    dy_val = dados_ticker['dy']
+    pl_val = dados_ticker['pl']
+    payout = dy_val * pl_val * 100 # Transformando em porcentagem
+
     c1, c2 = st.columns(2)
     with c1:
         st.write(f"**Segmento:** {dados_ticker['Segmento']}")
         st.write(f"**Região:** {dados_ticker['Regiao_Atuacao']}")
-        st.write(f"**Estados:** {dados_ticker['Estados_Atuacao']}")
+        
+        # Exibição do Payout com Alerta
+        if pl_val > 0:
+            if payout > 100:
+                st.write(f"**Payout:** {payout:.2f}% ⚠️")
+                st.caption("ℹ️ *Atenção: Payout acima de 100% indica uso de reservas ou eventos não recorrentes.*")
+            else:
+                st.write(f"**Payout:** {payout:.2f}%")
+        else:
+            st.write(f"**Payout:** N/A (P/L Negativo) ⚠️")
+            st.caption("ℹ️ *Empresa em prejuízo contábil; dividendos podem estar sendo pagos via caixa/reservas.*")
+
     with c2:
         st.write(f"**Patrimônio:** {formatar_bilhoes_milhoes(dados_ticker['patrliq'])}")
-        st.write(f"**P/L:** {dados_ticker['pl']:.2f}x")
+        st.write(f"**P/L:** {pl_val:.2f}x")
         st.write(f"**P/VP:** {dados_ticker['pvp']:.2f}x")
