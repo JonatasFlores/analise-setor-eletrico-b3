@@ -5,16 +5,20 @@ Esta plataforma de inteligência de dados integra análise fundamentalista está
 
 O projeto nasceu de um interesse pessoal em aprofundar a análise de dados no setor de *utilities*, unindo tecnologia e fundamentos econômicos para gerar insights rápidos sobre eficiência e valuation.
 
+Confira o resultado em https://eletricas-jonatasflores.streamlit.app/
+
 ## ✨ Funcionalidades Implementadas
 - [x] **Dashboard Executivo**: KPIs setoriais consolidados (ROE, DY, P/L e P/VP)
 - [x] **Inteligência Territorial**: Mapeamento da capilaridade das empresas por estados e regiões
 - [x] **Ranking de Performance**: Top 5 dinâmico para identificação de oportunidades e riscos (Endividamento, Valuation)
 - [x] **Terminal Real-Time**: Cotações ao vivo via Yahoo Finance com gráficos históricos de 12 meses
 - [x] **Curadoria de Ativos**: Dados atualizados com novos tickers e movimentações recentes do setor (ex: AXIA3, ISAE4)
+- [x] **Deploy Online**: Disponibilização do dashboard via Streamlit Cloud
 
 ## 🛠️ Tecnologias Utilizadas
 - **Python** (Pandas, Plotly, YFinance)
 - **Streamlit** (Interface e Visualização de Dados)
+- **SQLite/CSV** (Armazenamento de dados fundamentalistas)
 
 ## 💻 Como Executar o Projeto Localmente
 
@@ -33,11 +37,6 @@ pip install -r requirements.txt
 ```bash
 streamlit run app/main.py
 ```
-
-## 🌐 Próximos Passos
-- [ ] Deploy Online: Disponibilização do dashboard via Streamlit Cloud
-- [ ] Análise de Payout: Implementação de indicadores de distribuição de lucro
-- [ ] Varredura de Dados: Atualização final e validação de base antes da divulgação oficial
 
 ## 📈 Contexto e Objetivo
 Este projeto foi desenvolvido como aprimoramento complementar às competências de análise de mercado. Aplica conceitos de Stock Picking quantitativo e análise de balanços para demonstrar capacidade técnica em uma das áreas de atuação das Ciências Econômicas.
