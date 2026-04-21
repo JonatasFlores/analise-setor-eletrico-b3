@@ -5,7 +5,7 @@ Esta plataforma de inteligência de dados integra análise fundamentalista está
 
 O projeto nasceu de um interesse pessoal em aprofundar a análise de dados no setor de *utilities*, unindo tecnologia e fundamentos econômicos para gerar insights rápidos sobre eficiência e valuation.
 
-Confira o resultado em https://eletricas-jonatasflores.streamlit.app/
+Confira o resultado em [(https://eletricas-jonatasflores.streamlit.app/)]
 
 ## ✨ Funcionalidades Implementadas
 - [x] **Dashboard Executivo**: KPIs setoriais consolidados (ROE, DY, P/L e P/VP)
